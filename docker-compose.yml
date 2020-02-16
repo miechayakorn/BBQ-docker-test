@@ -6,6 +6,7 @@ services:
     ports: 
       - 80:80
 #      - 443:443
+    restart: always
     volumes: 
       - ./nginx/:/etc/nginx/conf.d/
       - ./www/:/usr/share/nginx/html
