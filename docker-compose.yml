@@ -20,7 +20,8 @@ services:
       MYSQL_PASSWORD: user
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: default_schema
-      
+    restart: always
+
 ### PHPMYADMIN #####################################
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
