@@ -5,3 +5,9 @@ BBQ-docker_test
 [https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-centos-7](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-centos-7)
 ## Ubuntu
 [https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository)
+
+### Install docker-ce
+[https://github.com/docker/compose/issues/6677#issuecomment-585383954](https://github.com/docker/compose/issues/6677#issuecomment-585383954)
+### Run docker-compose
+docker-compose up -d
+### Allow TCP port on aws
