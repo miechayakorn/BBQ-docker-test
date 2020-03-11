@@ -1,35 +1,5 @@
-# image: docker
-
-# service:
-#     - docker:dind
-
-# stages:
-#     - test
-#     - deploy
-
-# test:
-#     stage: test
-#     only:
-#         - develop
-#         - production
-#     script:
-#         - echo run tests in this section
-
-# step-deploy-prod:
-#     stage: deploy
-#     only:
-#         - develop
-#         - production
-#     script:
-#         - sudo apt-get install -y python-pip
-#         - pip install docker-compose
-#         - docker-compose up -d --build
-#     environment: production
-#     when: manual
-
 before_script:
     - docker info
-  
-  build_image:
+build_image:
     script:
       - echo TSET555
