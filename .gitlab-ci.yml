@@ -26,11 +26,10 @@
 #         - docker-compose up -d --build
 #     environment: production
 #     when: manual
+
 before_script:
     - docker info
   
   build_image:
     script:
-        - sudo apt-get install -y python-pip
-        - pip install docker-compose
-        - docker-compose up -d --build
+      - echo TSET555
