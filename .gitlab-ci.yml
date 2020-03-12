@@ -14,8 +14,8 @@ test:
     - master
   script:
     - echo run tests in this section
-    - docker ps
-    - docker-compose up -d
+    # - docker ps
+    # - docker-compose up -d
     # - cd ./server
     # - npm install
     # - npm test
