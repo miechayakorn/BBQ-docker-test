@@ -20,18 +20,13 @@ test:
     # - npm install
     # - npm test
 
-# step-deploy-prod:
-#   stage: deploy
-#   only:
-#     - production
-#   script:
-#     - sudo apt-get install -y python3-pip
-#     - sudo pip3 install --upgrade setuptools
-#     - sudo pip3 install docker-compose
-#     - sudo docker image prune -f
-#     - docker-compose build --no-cache
-#     - docker-compose up -d
-#   environment: production
-#   when: manual
+step-deploy-prod:
+  stage: deploy
+  only:
+    - master
+  script:
+    - sudo docker ps
+    - sudo docker-compose up -d
+  when: manual
 
 
