@@ -23,7 +23,7 @@ services:
       MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
     restart: always
-    network:
+    networks:
       - api-network
     
 ### ADONIS #####################################
@@ -34,7 +34,7 @@ services:
     restart: always
     volumes: 
       - ./adonis/:/app
-    network:
+    networks:
       - api-network
     # links:
     #   - mysql
