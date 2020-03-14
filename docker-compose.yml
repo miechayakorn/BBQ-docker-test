@@ -19,8 +19,8 @@ services:
     restart: always
     volumes: 
       - ./adonis/:/usr/src/app
-    links:
-      - mysql
+    # links:
+    #   - mysql
 
 ### My SQL #####################################
   mysql:
