@@ -31,9 +31,9 @@ services:
     build: ./adonis
     ports: 
       - "3333:3333"
-    restart: always
+        #    restart: always
     volumes: 
-      - ./adonis/:/app
+      - ./adonis/:/usr/adonis/
     networks:
       - api-network
     # links:
