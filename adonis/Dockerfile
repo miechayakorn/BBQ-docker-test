@@ -1,11 +1,12 @@
 FROM node:13.10-alpine
 
-CMD ["mkdir", "/app/adonis"]
+RUN useradd --user-group --create-home --shell /bin/false app
 
-COPY /adonis/* /app/adonis/
+ENV HOME=/home/app
 
-WORKDIR /app/adonis
+COPY adonis/package.json $HOME/
+
+RUN chown -R app:app $HOME/*
+
+WORKDIR $HOME
 RUN npm i -g @adonisjs/cli && npm install
-CMD ["ls"]
-CMD ["pwd"]
-CMD ["adonis", "serve"]
