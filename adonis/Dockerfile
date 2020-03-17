@@ -1,6 +1,6 @@
 FROM node:13.10-alpine
 
-RUN useradd --user-group --create-home --shell /bin/false app
+#RUN useradd --user-group --create-home --shell /bin/false app
 
 ENV HOME=/home/app
 
