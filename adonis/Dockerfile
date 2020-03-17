@@ -8,4 +8,5 @@ WORKDIR /app/adonis
 RUN npm i -g @adonisjs/cli && npm install
 RUN ls -la
 RUN pwd
-CMD ["adonis", "serve"]
+RUN mv .env.docker .env
+RUN adonis serve
