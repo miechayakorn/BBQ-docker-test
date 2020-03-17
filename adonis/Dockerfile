@@ -4,7 +4,7 @@ CMD ["mkdir", "/app/adonis"]
 
 #COPY ["/adonis/*", "/app/adonis"]
 
-WORKDIR ["/app/adonis"]
+WORKDIR /app/adonis
 RUN npm i -g @adonisjs/cli && npm install
 CMD ["ls"]
 CMD ["pwd"]
