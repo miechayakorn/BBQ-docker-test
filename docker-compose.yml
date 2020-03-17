@@ -30,7 +30,7 @@ services:
   ### ADONIS #####################################
   adonis:
     build: ./adonis
-    #    restart: always
+    image: adonis-app-prod:1.0
     networks:
       - api-network
     # links:
