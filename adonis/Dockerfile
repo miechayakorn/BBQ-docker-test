@@ -9,4 +9,4 @@ RUN npm i -g @adonisjs/cli && npm install
 RUN ls -la
 RUN pwd
 RUN mv .env.docker .env
-RUN adonis serve
+CMD ["adonis","serve"]
