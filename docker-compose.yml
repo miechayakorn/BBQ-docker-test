@@ -39,7 +39,7 @@ services:
 
 ### PHPMYADMIN #####################################
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin/phpmyadmin:4.9-fpm-alpine
     container_name: dev_pma
     links:
       - mysql
