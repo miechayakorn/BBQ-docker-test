@@ -32,9 +32,9 @@ services:
     ports: 
       - "3333:3333"
         #    restart: always
-    command: mkdir /usr/adonis
+    command: mkdir /app/adonis
     volumes: 
-      - ./adonis/:/usr/adonis/
+      - ./adonis/:/app/adonis
     networks:
       - api-network
     # links:
