@@ -1,22 +1,23 @@
-version: '3.1'
+version: "3.1"
 services:
-### NGINX #####################################
+  ### NGINX #####################################
   nginx:
-    build: ./nginx
-    ports: 
-      - 80:80
-#      - 443:443
+    image: nginx
+    ports:
+      - 8088:80
+    # - 443:443
+    volumes:
+      - ./nginx:/etc/nginx
     restart: always
-    volumes: 
-      - ./nginx/:/etc/nginx/conf.d/
-      - ./www/:/usr/share/nginx/html
+    networks:
+      - api-network
 
-### My SQL #####################################
+  ### My SQL #####################################
   mysql:
     image: mysql:5.7
     container_name: dev_mysql
     ports:
-      - 3306:3306
+      - 3307:3306
     environment:
       MYSQL_DATABASE: bbq
       MYSQL_USER: root
@@ -25,19 +26,17 @@ services:
     restart: always
     networks:
       - api-network
-    
-### ADONIS #####################################
+
+  ### ADONIS #####################################
   adonis:
     build: ./adonis
-    ports: 
-      - "3333:3333"
-        #    restart: always
+    #    restart: always
     networks:
       - api-network
     # links:
     #   - mysql
 
-### PHPMYADMIN #####################################
+  ### PHPMYADMIN #####################################
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: dev_pma
@@ -51,5 +50,5 @@ services:
     ports:
       - 8183:80
 
-networks: 
+networks:
   api-network:
