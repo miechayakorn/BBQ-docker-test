@@ -34,7 +34,7 @@ services:
         #    restart: always
     command: mkdir /app/adonis
     volumes: 
-      - ./adonis/:/app/adonis
+      - ./adonis/:/app/adonis/
     networks:
       - api-network
     # links:
