@@ -32,9 +32,9 @@ services:
     ports: 
       - "3333:3333"
         #    restart: always
-    command: sh ./docker-start.sh
+    command: mkdir /app/adonis
     volumes: 
-      - .:/app/adonis/
+      - ./adonis/:/app/adonis/
     networks:
       - api-network
     # links:
