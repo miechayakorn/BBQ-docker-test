@@ -8,4 +8,4 @@ RUN ls -la
 RUN pwd
 RUN mv .env.docker .env
 CMD ["adonis","key:generate"]
-CMD ["adonis","serve","-g"]
+CMD ["adonis","serve"]
