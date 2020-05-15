@@ -24,6 +24,10 @@ sudo usermod -aG docker ubuntu
 
 sudo systemctl enable --now docker
 
+--------------------------------------------------------------------------------
+
+#Password-added tool helps docker log in
+sudo apt install gnupg2 pass
 
 --------------------------------------------------------------------------------
 git clone https://gitlab.com/miechayakorn/BBQ-backend
